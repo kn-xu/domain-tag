@@ -34,7 +34,7 @@ return [
 
     'channels' => [
         'stack' => [
-            'driver' => 'stack',
+            'driver' => 'errorlog',
             'channels' => ['single'],
         ],
 
