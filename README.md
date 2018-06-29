@@ -22,3 +22,10 @@ Next, we want to compile some assets, so
 ## Usage
 To run the app server, just type
 > php artisan serve
+
+## Settings
+This was created with using Postgres and Redis as our backend DBs
+However, any relation DB can be used, as long as the env variables 
+are set correctly.
+
+*Note: The project itself has no SQL code to create a database, so it was done manually.

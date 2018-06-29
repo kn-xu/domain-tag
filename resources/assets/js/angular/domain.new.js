@@ -75,7 +75,15 @@
 
             if (ctrl.isValidDomain !== true) {
                 Notification.error({
-                    message: 'Since this domain already exists, please choose another.',
+                    message: 'We can not save this domain. Please verify it was a valid domain and that it doesn\'t already exist in our database.',
+                    title: 'Sorry'
+                });
+                return;
+            }
+
+            if (!ctrl.domain.description) {
+                Notification.error({
+                    message: 'Please enter a description for this domain.',
                     title: 'Sorry'
                 });
                 return;

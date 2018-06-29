@@ -21,8 +21,7 @@
 <div class="container main-container">
     <div class="jumbotron">
         <h1>Domain Tag</h1>
-        <p>This application entails a list of domains and a description of said domain along with the flagged status of
-            each domain retrieved from google's safe browsing api.
+        <p>This application entails a list of domains and their descriptions. Help us populate it for everyone!
         </p>
         <hr>
         <div class="row">

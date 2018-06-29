@@ -11,10 +11,17 @@
 |
 */
 
+/**
+ * Any and all routes OUTSIDE of ones that contain /api will be rendered with the welcome.blade.php template, which
+ * contains all the angular views
+ */
 Route::any('{path?}', function () {
     return view('welcome');
 })->where("all", "^((?!api).)*");
 
+/**
+ * Back end API endpoints
+ */
 Route::prefix('api/v1')->group(function () {
     Route::get('domains', "DomainsController@get");
     Route::get('domains/total', "DomainsController@total");
