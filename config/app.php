@@ -114,6 +114,9 @@ return [
     // Parameter for server IP as server side validations during back end API requests
     'server_ip' => env('SERVER_IP', '127.0.0.1'),
 
+    // Parameter to validate IP of request if from a static IP deployment
+    'validate_ip' => env('VALIDATE_IP', false),
+
     // Database name so variable can be accessed in migration for DB creation
     'database_name' => env('DB_DATABASE', 'domain-tagging'),
 

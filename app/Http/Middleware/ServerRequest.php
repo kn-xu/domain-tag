@@ -15,7 +15,7 @@ class ServerRequest
      */
     public function handle($request, Closure $next)
     {
-        if (config('app.server_ip') !== $request->ip()) {
+        if (config('app.validate_ip') && config('app.server_ip') !== $request->ip()) {
             return response('Invalid Request, hacker!', 401);
         }
 
