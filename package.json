@@ -27,6 +27,7 @@
         "angular-ui-notification": "^0.3.6",
         "angular-ui-router": "^1.0.18",
         "bootstrap-sass": "^3.3.7",
-        "xss": "^1.0.3"
+        "xss": "^1.0.3",
+        "bower": "^1.5.2"
     }
 }
