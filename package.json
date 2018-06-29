@@ -21,7 +21,12 @@
     },
     "dependencies": {
         "angular": "^1.7.2",
+        "angular-animate": "^1.7.2",
+        "angular-table": "^1.0.4",
+        "angular-ui-bootstrap": "^2.5.6",
         "angular-ui-notification": "^0.3.6",
-        "angular-ui-router": "^1.0.18"
+        "angular-ui-router": "^1.0.18",
+        "bootstrap-sass": "^3.3.7",
+        "xss": "^1.0.3"
     }
 }

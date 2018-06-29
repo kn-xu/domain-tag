@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::any('{path?}', function () {
     return view('welcome');
+})->where("all", "^((?!api).)*");
+
+Route::prefix('api/v1')->group(function () {
+    Route::get('domains', "DomainsController@get");
+    Route::get('domains/total', "DomainsController@total");
+    Route::get('domains/{domainId}/description', "DomainsController@description");
+
+    Route::post('domains', "DomainsController@create");
+    Route::post('validate', "DomainsController@validateDomain");
 });

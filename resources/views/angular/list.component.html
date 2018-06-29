@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-lg-6">
+        <a ui-sref='list' class="btn btn-primary">Domain List</a>
+    </div>
+    <div class="col-lg-6 text-right">
+        <a ui-sref='new' class="btn btn-primary">Add Domain</a>
+    </div>
+</div>
+<hr class="routing-hr">
+<square-spinner show="ctrl.loading"></square-spinner>
+<div class="table-responsive domains-list" ng-if="!ctrl.loading">
+    <table class="table table-condensed table-bordered" at-table at-paginated at-list="ctrl.domains" at-config="ctrl.tableOptions">
+        <thead>
+        <tr>
+            <th at-attribute="domain">Domain</th>
+            <th at-attribute="description">Description</th>
+            <th at-attribute="flag_status">Is Safe Domain?</th>
+            <th at-attribute="created_at">Created At</th>
+            <th at-attribute="update_at">Last Updated At</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td at-implicit at-attribute="domain"></td>
+            <td at-attribute="description" ng-click="ctrl.getDescription(item)">
+                <a href="">Click For Description</a>
+            </td>
+            <td at-attribute="flag_status" class="text-center">
+                <span class="dot" ng-class="{'dot-green': item.flag_status === 1, 'dot-red': item.flag_status === 2}"></span>
+            </td>
+            <td at-implicit at-attribute="created_at"></td>
+            <td at-implicit at-attribute="updated_at"></td>
+        </tr>
+        </tbody>
+    </table>
+    <ul uib-pagination
+        ng-click="ctrl.setPage()"
+        ng-disabled="ctrl.loading || ctrl.throttled"
+        total-items="ctrl.totalDomains"
+        items-per-page="ctrl.tableOptions.itemsPerPage"
+        ng-model="ctrl.currentPage"
+        class="pagination-sm"
+        boundary-link-numbers="true">
+    </ul>
+</div>

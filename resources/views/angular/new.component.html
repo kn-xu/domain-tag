@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-lg-6">
+        <a ui-sref='list' class="btn btn-primary">Domain List</a>
+    </div>
+    <div class="col-lg-6 text-right">
+        <a ui-sref='new' class="btn btn-primary">Add Domain</a>
+    </div>
+</div>
+<hr class="routing-hr">
+<form name="new-domain">
+    <div class="form-group" ng-class="{'has-error': ctrl.isValidDomain === false, 'has-success': ctrl.isValidDomain === true}">
+        <div class="row">
+            <div class="col-lg-12">
+                <label>Domain
+                    <span class="domain-name-helper">(Please enter http(s) in the beginning of the domain)</span>
+                </label>
+                <div class="input-group">
+                    <input class="form-control"
+                           ng-change='ctrl.validateDomain()'
+                           ng-model-options="{'debounce': 1500}"
+                           ng-model="ctrl.domain.domain">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pushpin"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-12">
+                <label>Description</label>
+                <div class="input-group">
+                    <textarea rows="5" class="form-control domain-textarea" ng-model="ctrl.domain.description"></textarea>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-12 text-right">
+                <button class="btn btn-success" ng-click="ctrl.submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

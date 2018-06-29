@@ -5,8 +5,17 @@
 // Variables
 @import "variables";
 
+// Notification
+@import "notification";
+
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+// Custom
+@import 'custom';
+
+// Spinner
+@import 'spinner';
 
 .navbar-laravel {
   background-color: #fff;

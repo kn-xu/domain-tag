@@ -108,6 +108,15 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    // Parameter for using redis
+    'use_redis' => env('USE_REDIS', false),
+
+    // Parameter for server IP as server side validations during back end API requests
+    'server_ip' => env('SERVER_IP', '127.0.0.1'),
+
+    // Database name so variable can be accessed in migration for DB creation
+    'database_name' => env('DB_DATABASE', 'domain-tagging'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

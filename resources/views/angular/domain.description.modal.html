@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h2 class="modal-title">Description of {{ ctrl.domain.domain }}</h2>
+</div>
+<div class="modal-body">
+    <square-spinner show="ctrl.loading"></square-spinner>
+    <textarea readonly class="form-control domain-textarea" row="5" ng-model="ctrl.description"></textarea>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-default" ng-click="ctrl.closeModal()">Close</button>
+</div>
